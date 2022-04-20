@@ -1,32 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Home() {
-  const [displayName, setDisplayName] = useState(false);
-  const [getName, setGetName] = useState("");
+	return (
+		<div>
+			{" "}
+			<section className="home" id="home">
+				<div className="home_container">
+					<div className="home_data">
+						<p className="home_greet">Hello!</p>
+						<h1 className="home_name">
+							I'm{" "}
+							<span className="font-effect-shadow-multiple">Shana Maldisa</span>
+						</h1>
+						<h3 className="home_job">
+							a <span className="auto-type"></span>
+						</h3>
 
-  const onChangeName = async (e) => {
-    setGetName(e.target.value);
-  };
-  const submitName = async () => {
-    setDisplayName(!displayName);
-  };
-  return (
-    <div style={{ height: "100%", width: "100%" }}>
-      <h1>Welcome to React Js</h1>
-      <div>
-        <input
-          style={{ padding: "5px" }}
-          id="nameInput"
-          onChange={(e) => {
-            onChangeName(e);
-          }}
-        ></input>
-      </div>
-      <div>
-        <h2>{getName ? `Hi ${getName}` : ""}</h2>
-      </div>
-    </div>
-  );
+						<a href="#about" className="button">
+							<span className="more_about_me">More About Me</span>
+							<i className="bx bx-user-pin"></i>
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	);
 }
 
 export default Home;
